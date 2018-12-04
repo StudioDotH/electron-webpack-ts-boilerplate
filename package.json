@@ -4,12 +4,12 @@
   "description": "",
   "main": "bundled/main/bundle.js",
   "scripts": {
-    "build:dev": "ENV=development && webpack",
-    "run:dev": "ENV=development && webpack && electron .",
-    "build:prod": "ENV=production && webpack",
-    "run:prod": "ENV=production && webpack && electron .",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "build:dev": "export ENV=development && webpack",
+    "run:dev": "export ENV=development && webpack && electron .",
+    "build:prod": "export ENV=production && webpack",
+    "run:prod": "export ENV=production && webpack && electron .",
+    "pack": "webpack && electron-builder --dir",
+    "dist": "webpack && electron-builder"
   },
   "keywords": [],
   "author": "",
