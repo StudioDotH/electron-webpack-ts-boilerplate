@@ -29,6 +29,18 @@ module.exports = {
         ]
       },
       {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true
+            }
+          }
+        ]
+      },
+      {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: [
@@ -38,7 +50,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js', '.scss' ]
+    extensions: [ '.tsx', '.ts', '.js', '.scss', '.css' ]
   },
   plugins: [
     new HtmlWebpackPlugin()
