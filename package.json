@@ -1,13 +1,15 @@
 {
-  "name": "fuckEl",
+  "name": "electron-webpack-ts-boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/main/bundle.js",
+  "main": "bundled/main/bundle.js",
   "scripts": {
     "build:dev": "ENV=development && webpack",
     "run:dev": "ENV=development && webpack && electron .",
     "build:prod": "ENV=production && webpack",
-    "run:prod": "ENV=production && webpack && electron ."
+    "run:prod": "ENV=production && webpack && electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,7 @@
     "@types/node": "^10.12.12",
     "css-loader": "^1.0.1",
     "electron": "^3.0.10",
+    "electron-builder": "^20.38.2",
     "html-webpack-plugin": "^3.2.0",
     "node-sass": "^4.10.0",
     "sass-loader": "^7.1.0",
@@ -24,5 +27,11 @@
     "typescript": "^3.2.1",
     "webpack": "^4.27.0",
     "webpack-cli": "^3.1.2"
+  },
+  "build": {
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    }
   }
 }

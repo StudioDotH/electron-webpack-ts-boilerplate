@@ -5,7 +5,7 @@ module.exports = {
   entry: path.resolve(__dirname, '../src/main/index.ts'),
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, '../dist/main')
+    path: path.resolve(__dirname, '../bundled/main')
   },
   node: {
     __dirname: false,

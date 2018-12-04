@@ -6,7 +6,7 @@ module.exports = {
   entry: path.join(__dirname, '../src/renderer/index.ts'),
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, '../dist/renderer')
+    path: path.resolve(__dirname, '../bundled/renderer')
   },
   node: {
     __dirname: false,
