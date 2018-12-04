@@ -16,6 +16,19 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.scss$/,
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              modules: true
+            }
+          },
+          "sass-loader"
+        ]
+      },
+      {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: [
@@ -25,7 +38,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ]
+    extensions: [ '.tsx', '.ts', '.js', '.scss' ]
   },
   plugins: [
     new HtmlWebpackPlugin()
