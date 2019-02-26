@@ -4,10 +4,10 @@
   "description": "",
   "main": "bundled/main/bundle.js",
   "scripts": {
-    "build:dev": "export ENV=development && webpack",
-    "run:dev": "export ENV=development && webpack && electron .",
-    "build:prod": "export ENV=production && webpack",
-    "run:prod": "export ENV=production && webpack && electron .",
+    "build:dev": "cross-env ENV=development && webpack",
+    "run:dev": "cross-env ENV=development && webpack && electron .",
+    "build:prod": "cross-env ENV=production && webpack",
+    "run:prod": "cross-env ENV=production && webpack && electron .",
     "pack": "webpack && electron-builder --dir",
     "dist": "webpack && electron-builder"
   },
@@ -16,6 +16,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^10.12.12",
+    "cross-env": "^5.2.0",
     "css-loader": "^1.0.1",
     "electron": "^3.0.10",
     "electron-builder": "^20.38.2",
